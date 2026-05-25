@@ -1,37 +1,68 @@
 <!DOCTYPE html>
-<html lang='en'>
-
+<html lang="en">
 <head>
-  <meta charset='UTF-8' />
-  <meta content='width=device-width, initial-scale=1.0' name='viewport' />
-  <title></title>
-  <link href='styles.css' rel='stylesheet' />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="WCER SimLab — Simulation-Based Learning at UW–Madison" />
+  <title>WCER SimLab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <div id='app-shell' class='app-shell'>
-    <header class='top-banner' id='top-banner'>
-      <div class='logo' id='logo'>SimLab</div>
-      <nav class='main-nav' id='main-nav'></nav>
+  <div id="app-shell" class="app-shell">
+
+    <!-- ===== HEADER ===== -->
+    <header class="top-banner" id="top-banner">
+      <div class="brand">
+        <div class="logo" id="logo">SimLab</div>
+        <div class="logo-sub">WCER · UW–Madison</div>
+      </div>
+      <nav class="main-nav" id="main-nav" aria-label="Primary"></nav>
     </header>
-    <section class='tagline' id='tagline'></section>
-    <section class='main-content' id='main-content'>
-      <div class='breadcrumbs' id='breadcrumbs'></div>
-      <div class='content-area' id='content-area'></div>
-      <div class='context-area' id='context-area'></div>
-      <div class='search-row' id='search-row'>
-        <input class='search-text' id='search-text' type='text' />
-        <button class='explore-button' id='explore-button'></button>
+
+    <!-- ===== TAGLINE / HERO STRIP ===== -->
+    <section class="tagline" id="tagline" aria-live="polite"></section>
+
+    <!-- ===== MAIN ===== -->
+    <section class="main-content" id="main-content">
+
+      <div class="main-inner">
+        <nav class="breadcrumbs" id="breadcrumbs" aria-label="Breadcrumb"></nav>
+
+        <div class="context-area" id="context-area"></div>
+
+        <div class="content-area" id="content-area"></div>
+
+        <div class="search-row" id="search-row">
+          <input
+            class="search-text"
+            id="search-text"
+            type="text"
+            aria-label="Search SimLab"
+          />
+          <button class="explore-button" id="explore-button" type="button"></button>
+        </div>
       </div>
-      <div id='session-box' class='session-box'>
-        <h4>Journey Log</h4>
-        <div id='session-string'></div>
-      </div>
+
+      <!-- ===== JOURNEY LOG ===== -->
+      <aside class="session-box" id="session-box" aria-label="Your journey so far">
+        <div class="session-header">
+          <h4>Your Journey</h4>
+          <button class="reset-btn" id="reset-btn" type="button" title="Start over">Reset</button>
+        </div>
+        <div id="session-string"></div>
+      </aside>
     </section>
-    <footer class='bottom-banner' id='bottom-banner'></footer>
-    <script src='varFile.js'></script>
-    <script src='app.js'></script>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="bottom-banner" id="bottom-banner"></footer>
+
+    <!-- Scripts: data file MUST load before app -->
+    <script src="varFile.js"></script>
+    <script src="app.js"></script>
   </div>
 </body>
-
 </html>
