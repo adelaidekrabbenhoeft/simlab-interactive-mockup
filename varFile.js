@@ -1,131 +1,123 @@
 const siteSpecific = {
-  title: 'WCER SimLab',
-  tagline: 'Simulation-Based Learning to Manage Challenging Situations',
-  searchPlaceholder: 'Ask anything about SimLab…',
-  exploreLabel: 'Explore',
+  title: 'WCER SimLab: The Journey',
+  tagline: 'Step out of the ordinary. Master the challenging.',
+  searchPlaceholder: 'Search for trials, mentors, or concepts...',
+  exploreLabel: 'Explore the Path',
   footer: '© 2025–2026 University of Wisconsin–Madison SimLab',
-  menuItems: ['About', 'Publications', 'News', 'Connect'],
+  menuItems: ['The Ordinary World', 'The Call', 'The Trials', 'The Mentors', 'The Return'],
   topLevel: ['Home']
 };
 
 const contentItems = {
 
-  /* -------- Pages -------- */
-
   Home: {
-    label: 'Home',
-    context: 'Select a topic above to explore SimLab concepts.',
+    label: 'The Threshold',
+    context: 'Every practitioner faces moments that test their limits. Select a stage of the journey above to explore how SimLab prepares you for the challenges ahead.',
     tags: ['home']
   },
 
-  About: {
-    label: 'About',
-    context: 'Mission, approach, and background',
-    tags: ['about']
+  'The Ordinary World': {
+    label: 'The Ordinary World',
+    context: 'Before the challenge arises, we must understand the baseline. This is our mission and the everyday reality of the professionals we serve.',
+    tags: ['ordinary-world', 'about']
   },
 
-  Design: {
-    label: 'Design',
-    context: 'Methods for development and delivery',
-    tags: ['design']
+  'The Call': {
+    label: 'The Call to Adventure',
+    context: 'A difficult situation presents itself. We use modern assessment design and AI to help you answer the call.',
+    tags: ['the-call', 'design']
   },
 
-  Team: {
-    label: 'Team',
-    context: 'SimLab personnel',
-    tags: ['team']
+  'The Trials': {
+    label: 'The Trials',
+    context: 'The core of our simulations. Face challenging tasks, fraught content, and charged contexts in a safe environment.',
+    tags: ['the-trials', 'challenge']
   },
 
-  Publications: {
-    label: 'Publications',
-    context: 'SimLab publications and related scholarly work',
-    tags: ['publications']
+  'The Mentors': {
+    label: 'The Mentors',
+    context: 'Meet the guides who build the simulations and research the science of professional learning.',
+    tags: ['mentors', 'team', 'publications']
   },
 
-  News: {
-    label: 'News',
-    context: 'News, events, and updates',
-    tags: ['news']
+  'The Return': {
+    label: 'The Return',
+    context: 'Bring your new skills back to your practice. Connect with us to bring SimLab to your organization.',
+    tags: ['the-return', 'connect']
   },
 
-  Connect: {
-    label: 'Connect',
-    context: 'Ways to connect and collaborate',
-    tags: ['connect']
+  /* =======================
+     THE LORE (Boxes)
+  ======================= */
+
+  MissionBox: {
+    title: 'The SimLab Mission',
+    text: 'Our mission is to provide practitioners with realistic, structured simulation experiences so they aren\'t facing the unknown alone.',
+    tags: ['ordinary-world', 'home']
   },
 
-  /* -------- Boxes -------- */
-
-  AboutSimLab: {
-    title: 'About SimLab',
-    text: 'SimLab is a project within WCER established to address training and assessment of professionals’ skills in managing challenging situations.',
-    tags: ['about', 'home']
+  ApproachBox: {
+    title: 'Forging the Tools',
+    text: 'SimLab uses evidence-based professional learning approaches combined with AI to create dynamic, responsive scenarios.',
+    tags: ['the-call', 'design']
   },
 
-  SimLabMission: {
-    title: "SimLab’s Mission",
-    text: 'SimLab’s mission is to provide practitioners with realistic, structured simulation experiences.',
-    tags: ['about']
+  ChallengeDefinition: {
+    title: 'Defining the Obstacle',
+    text: 'We tackle situations involving difficult <a href="#" data-nav="TaskTrial">tasks</a>, charged <a href="#" data-nav="ContentTrial">content</a>, and stressful <a href="#" data-nav="ContextTrial">contexts</a>.',
+    tags: ['the-trials', 'the-call']
   },
 
-  SimLabApproach: {
-    title: "SimLab’s Approach",
-    text: 'SimLab uses modern assessment design, AI, and evidence‑based professional learning approaches.',
-    tags: ['design']
+  TaskTrial: {
+    title: 'Trial 1: The Task',
+    text: 'The skill is difficult. You must demonstrate competence that is tough to acquire, like giving hard feedback or reading group dynamics before they fracture.',
+    tags: ['the-trials', 'challenge']
   },
 
-  WhatIsChallenging: {
-    title: 'What Do We Mean by “Challenging”?',
-    text: 'SimLab tackles challenging situations involving difficult <a href="#" data-nav="ChallengingTask">tasks</a>, charged <a href="#" data-nav="ChallengingContent">content</a>, and stressful <a href="#" data-nav="ChallengingContext">contexts</a>.',
-    tags: ['design', 'challenge']
+  ContentTrial: {
+    title: 'Trial 2: The Content',
+    text: 'The content is fraught. You must address sensitive topics, such as navigating mental health discussions or addressing suspicions of abuse.',
+    tags: ['the-trials', 'challenge']
   },
 
-  ChallengingTask: {
-    title: 'What Are Challenging Tasks?',
-    text: 'The skill is difficult: A professional must demonstrate competence that is tough to acquire. Examples include giving hard feedback, being honest without damaging trust or motivation, or reading group dynamics and sensing tension, exclusion, confusion, or disengagement before it becomes problematic.',
-    tags: ['design', 'challenge']
+  ContextTrial: {
+    title: 'Trial 3: The Context',
+    text: 'The environment is charged. You must defuse explosive situations, calm angry individuals, or navigate complex social hierarchies under pressure.',
+    tags: ['the-trials', 'challenge']
   },
 
-  ChallengingContent: {
-    title: 'What Is Challenging Content?',
-    text: 'The content is fraught: A professional must address a sensitive or nuanced topic. Examples include asking about one\'s or someone else\'s mental health, or feeling out a suspicion of worrying situations such as abuse.',
-    tags: ['design', 'challenge']
+  ResearchBox: {
+    title: 'The Archives (Publications)',
+    text: 'Explore our scholarly work and the foundational research that powers every simulation we design.',
+    tags: ['mentors', 'publications']
   },
 
-  ChallengingContext: {
-    title: 'What Are Challenging Contexts?',
-    text: 'The context is charged: A professional must defuse a potentially explosive situation. Examples include calming an angry individual or soothing a distraught individual, who may be at a peer level or at a higher or lower level in the social hierarchy.',
-    tags: ['design', 'challenge']
+  TeamBox: {
+    title: 'Meet the Guides',
+    text: 'Our personnel are dedicated to researching, developing, and facilitating high-stakes conversation training.',
+    tags: ['mentors', 'team']
   },
 
-  SimLabOffers: {
-    title: 'What SimLab Offers',
-    text: 'SimLab offers professionals the opportunity to rehearse high‑stakes conversations.',
-    tags: ['design', 'home']
-  },
-
-  ConnectWithUs: {
-    title: 'Connect With Us',
-    text: 'See our <a href="#" data-nav="Team">Team</a> page or email simlab@wcer.wisc.edu.',
-    tags: ['connect']
-  },
-
-  PartnerSupport: {
-    title: 'Partner Support',
-    text: 'SimLab supports partners with simulation development, delivery, and analysis.',
-    tags: ['connect', 'design']
+  PartnerBox: {
+    title: 'Equipping Your Team',
+    text: 'SimLab supports partners with simulation development, delivery, and analysis. Bring the journey to your organization.',
+    tags: ['the-return', 'connect', 'home']
   }
 };
 
 const keywordMap = {
-  about: 'About',
-  challenge: 'Design',
-  challenging: 'Design',
-  design: 'Design',
-  team: 'Team',
-  people: 'Team',
-  publications: 'Publications',
-  news: 'News',
-  connect: 'Connect',
-  contact: 'Connect'
+  mission: 'The Ordinary World',
+  about: 'The Ordinary World',
+  design: 'The Call',
+  ai: 'The Call',
+  trials: 'The Trials',
+  challenge: 'The Trials',
+  task: 'The Trials',
+  content: 'The Trials',
+  context: 'The Trials',
+  team: 'The Mentors',
+  guides: 'The Mentors',
+  research: 'The Mentors',
+  connect: 'The Return',
+  partner: 'The Return'
 };

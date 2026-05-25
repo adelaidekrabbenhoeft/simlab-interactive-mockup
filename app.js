@@ -145,10 +145,6 @@ function navigate(section) {
   render(section);
 }
 
-/* =======================
-   RENDER
-======================= */
-
 function render(section) {
   updateBreadcrumbs();
 
@@ -156,19 +152,29 @@ function render(section) {
   contextArea.textContent = page.context || '';
 
   contentArea.innerHTML = '';
-  const row = document.createElement('div');
-  row.className = 'box-row';
+  
+  // Create the new path container
+  const pathContainer = document.createElement('div');
+  pathContainer.className = 'journey-path';
 
-  getBoxes().forEach(box => {
-    const div = document.createElement('div');
-    div.className = 'box';
+  getBoxes().forEach((box, index) => {
+    const waypoint = document.createElement('div');
+    
+    // Alternate left and right placement for a winding effect
+    const sideClass = index % 2 === 0 ? 'path-left' : 'path-right';
+    waypoint.className = `waypoint ${sideClass}`;
 
-    div.innerHTML = `
-      <h3>${box.title}</h3>
-      <p>${box.text}</p>
+    waypoint.innerHTML = `
+      <div class="path-node"></div>
+      <div class="path-card">
+        <h3>${box.title}</h3>
+        <p>${box.text}</p>
+      </div>
+      <div class="path-spacer"></div> 
     `;
 
-    div.onclick = () => {
+    // Click event to continue the journey
+    waypoint.onclick = () => {
       activeTags = [...new Set([...activeTags, ...box.tags])];
       historyPath.push(box.id);
       recordView(box.id);
@@ -176,10 +182,10 @@ function render(section) {
       render(section);
     };
 
-    row.appendChild(div);
+    pathContainer.appendChild(waypoint);
   });
 
-  contentArea.appendChild(row);
+  contentArea.appendChild(pathContainer);
 }
 
 /* =======================
@@ -204,7 +210,7 @@ function updateBreadcrumbs() {
     };
 
     crumbs.appendChild(span);
-    if (i < historyPath.length - 1) crumbs.append(' > ');
+    if (i < xhistoryPath.length - 1) crumbs.append(' > ');
   });
 }
 
